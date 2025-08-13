@@ -98,13 +98,13 @@ curl -O https://cnb.cool/bin456789/reinstall/-/git/raw/main/reinstall.sh || wget
 国外服务器：
 
 ```batch
-certutil -urlcache -f -split https://raw.githubusercontent.com/cedar323/reinstall/main/reinstall.bat
+certutil -urlcache -f -split https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.bat
 ```
 
 国内服务器：
 
 ```batch
-certutil -urlcache -f -split https://cnb.cool/cedar323/reinstall/-/git/raw/main/reinstall.bat
+certutil -urlcache -f -split https://cnb.cool/bin456789/reinstall/-/git/raw/main/reinstall.bat
 ```
 
 ## 使用
