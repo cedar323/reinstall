@@ -109,8 +109,6 @@ rem 重新分区/格式化
     echo delete part override
     echo select part 2
     echo delete part override
-    echo select part 3
-    echo delete part override
 
     echo create part efi size=%EFISize%
     echo format fs=fat32 quick
@@ -249,3 +247,4 @@ if not errorlevel 1 (
     drvload "%~1"
 )
 exit /b
+
