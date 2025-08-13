@@ -105,21 +105,10 @@ rem 重新分区/格式化
 (if "%BootType%"=="efi" (
     echo select disk %DiskIndex%
 
-    rem 删除系统保留 + C 分区，但保留 D 盘
-    for %%p in (1 2 3) do (
-        rem 获取卷标
-        for /f "tokens=3" %%v in ('echo list part ^| diskpart ^| find "Part %%p"') do (
-            set "PartLabel=%%v"
-            setlocal enabledelayedexpansion
-            if /i "!PartLabel!"=="D" (
-                rem D盘跳过
-            ) else (
-                echo select part %%p
-                echo delete part override
-            )
-            endlocal
-        )
-    )
+    echo select part 1
+    echo delete part override
+    echo select part 2
+    echo delete part override
 
     echo create part efi size=%EFISize%
     echo format fs=fat32 quick
@@ -258,5 +247,6 @@ if not errorlevel 1 (
     drvload "%~1"
 )
 exit /b
+
 
 
