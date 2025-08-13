@@ -3,7 +3,7 @@ mode con cp select=437 >nul
 setlocal EnableDelayedExpansion
 
 set confhome=https://raw.githubusercontent.com/cedar323/reinstall/main
-set confhome_cn=https://cnb.cool/cedar323/reinstall/-/git/raw/main
+set confhome_cn=https://raw.githubusercontent.com/cedar323/reinstall/main
 rem set confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/cedar323/reinstall/main
 
 set pkgs=curl,cpio,p7zip,dos2unix,jq,xz,gzip,zstd,openssl,bind-utils,libiconv,binutils
@@ -238,4 +238,5 @@ for %%c in (%cmds_space%) do (
     )
 )
 exit /b 0
+
 
